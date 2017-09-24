@@ -1,0 +1,29 @@
+$transitionDuration: 200ms;
+
+.check-button {
+  background: none;
+  border: none;
+  font: inherit;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  color: white;
+  opacity: 0.4;
+  transition: $transitionDuration;
+}
+
+.check-button_selected {
+  opacity: 1;
+  animation: activate $transitionDuration;
+}
+
+@keyframes activate {
+  0%   {transform: scale(1);}
+  25%   {transform: scale(0.95);}
+  75%  {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}

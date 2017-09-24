@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'My first app';
+  currentStep = 0;
+  detectionType = '';
+
+  setCurrentStep(newStep) {
+    this.currentStep = newStep;
+  }
+
+  setDetectionType(newDetectionType: string) {
+    this.detectionType = newDetectionType;
+  }
 }

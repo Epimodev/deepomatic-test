@@ -1,0 +1,26 @@
+.step {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.step__title {
+  font-weight: 400;
+  font-size: 26px;
+  text-align: center;
+}
+
+.step__content {
+  padding: 15px;
+  background-color: rgba(black, 0.1);
+}
+
+.step__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.step__buttons_only-next {
+  justify-content: center;
+}

@@ -1,1 +1,6 @@
-<app-first-step></app-first-step>
+<app-first-step (onStart)="setCurrentStep(1)"></app-first-step>
+<app-second-step
+  [selectedType]="detectionType"
+  (onChangeType)="setDetectionType($event)"
+  (onValid)="setCurrentStep(2)"
+></app-second-step>

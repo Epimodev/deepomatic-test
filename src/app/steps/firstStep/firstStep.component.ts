@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import messages from '../../../messages';
 
 @Component({
@@ -6,13 +6,14 @@ import messages from '../../../messages';
   templateUrl: './firstStep.component.html',
 })
 export class FirstStepComponent {
+  @Output() onStart = new EventEmitter<void>();
   title = messages.HELLO;
   sentences = [
     messages.WELCOME_IN_DEMO,
     messages.YOU_CAN_DETECT_OBJECTS
   ];
 
-  start() {
-    console.log('start app');
+  handleStart() {
+    this.onStart.emit();
   }
 }

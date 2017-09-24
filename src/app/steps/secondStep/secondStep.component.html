@@ -1,0 +1,11 @@
+<app-step [title]="title" (onNext)="validStep()" [nextIsActive]="!!selectedType">
+  <div class="second-step__buttons">
+    <app-check-button
+      *ngFor="let type of types"
+      [label]="type.label"
+      [selected]="type.value === selectedType"
+      [color]="type.color"
+      (onClick)="handleChangeType(type.value)"
+    ></app-check-button>
+  </div>
+</app-step>

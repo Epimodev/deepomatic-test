@@ -1,0 +1,16 @@
+<div class="step">
+  <h1 class="step__title">{{title}}</h1>
+
+  <div class="step__content">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="step__buttons" [ngClass]="{'step__buttons_only-next': !hasPrev}">
+    <app-button *ngIf="hasPrev" (onClick)="handlePrev()">
+      {{prevLabel}}
+    </app-button>
+    <app-button *ngIf="hasNext" (onClick)="handleNext()" [disabled]="!nextIsActive">
+      {{nextLabel}}
+    </app-button>
+  </div>
+</div>

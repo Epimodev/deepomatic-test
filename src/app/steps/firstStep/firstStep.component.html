@@ -1,7 +1,3 @@
-<h1 class="step-title">{{title}}</h1>
-
-<div class="box-content">
-  <p *ngFor="let sentence of sentences">{{sentence}}</p>
-</div>
-
-<app-button (onClick)="start()">Commencer</app-button>
+<app-step [title]="title" (onNext)="handleStart()" [nextIsActive]="true">
+    <p *ngFor="let sentence of sentences">{{sentence}}</p>
+</app-step>

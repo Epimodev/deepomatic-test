@@ -9,7 +9,6 @@ $transition-duration: 200ms;
   border: none;
   font: inherit;
   outline: none;
-  cursor: pointer;
   padding: 0;
   width: 200px;
   height: 50px;
@@ -52,6 +51,7 @@ $transition-duration: 200ms;
 }
 
 .button_enable {
+  cursor: pointer;
   .button__content {
     opacity: 1;
   }
