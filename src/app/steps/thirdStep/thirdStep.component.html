@@ -22,7 +22,7 @@
         [ngClass]="{'third-step__input-container_url-hidden': uploadType !== 'url'}"
       >
         <app-input
-          class="third-step__url-input-element"
+          style="width: 100%"
           label="URL"
           [value]="imageUrl"
           (onChange)="setImageUrl($event)"
@@ -32,12 +32,11 @@
         class="third-step__input-container"
         [ngClass]="{'third-step__input-container_file-hidden': uploadType !== 'file'}"
       >
-        <app-input
-          class="third-step__url-input-element"
-          label="URL"
-          [value]="imageUrl"
-          (onChange)="setImageUrl($event)"
-        ></app-input>
+        <app-file-input
+          [label]="messages.CLICK_OR_DROP_FILE"
+          style="width: 100%"
+          (onChange)="setImageFile($event)"
+        ></app-file-input>
       </div>
     </div>
   </div>

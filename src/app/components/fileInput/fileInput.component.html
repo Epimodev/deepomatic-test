@@ -1,0 +1,10 @@
+<label
+  class="input-file"
+  [ngClass]="{'input-file_over': isDragOver}"
+  (dragenter)="dragEnter()"
+  (dragleave)="dragLeave()"
+  (drop)="dropFile($event)"
+>
+  {{label}}
+  <input class="input-file__field" type="file" (change)="handleChangeFile($event)">
+</label>

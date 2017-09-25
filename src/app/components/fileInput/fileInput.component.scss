@@ -1,0 +1,24 @@
+@import "colors";
+
+.input-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: rgba(white, 0.1);
+  border-radius: 20px;
+  border: 3px dashed white;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.input-file_over {
+  background-color: rgba($cl-green, 0.1);
+  border-color: $cl-green;
+}
+
+.input-file__field {
+  display: none;
+}

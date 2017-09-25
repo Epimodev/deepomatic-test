@@ -11,6 +11,7 @@ export class ThirdStepComponent {
   @Output() onValid = new EventEmitter<void>();
   uploadType = '';
   imageUrl = '';
+  imageFile: File;
   messages = messages;
 
   setUploadType(newType: string) {
@@ -23,6 +24,27 @@ export class ThirdStepComponent {
 
   setImageUrl(newUrl: string) {
     this.imageUrl = newUrl;
+  }
+
+  setImageFile(newFile: File) {
+    this.imageFile = newFile;
+  }
+
+  getInputLabel() {
+    if (this.imageFile) {
+      return this.imageFile.name;
+    }
+    return messages.CLICK_OR_DROP_FILE;
+  }
+
+  stepIsValid() {
+    if (this.uploadType === 'url') {
+      return !!this.imageUrl;
+    } else if (this.uploadType === 'file') {
+      return !!this.imageFile;
+    }
+
+    return false;
   }
 
   validStep() {
