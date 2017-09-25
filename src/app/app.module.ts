@@ -10,6 +10,7 @@ import { InputComponent } from './components/input/input.component';
 import { FileInputComponent } from './components/fileInput/fileInput.component';
 import { AnalizedImageComponent } from './components/analizedImage/analizedImage.component';
 import { ImageAreaComponent } from './components/imageArea/imageArea.component';
+import { LoaderComponent } from './components/loader/loader.component';
 import { FirstStepComponent } from './steps/firstStep/firstStep.component';
 import { SecondStepComponent } from './steps/secondStep/secondStep.component';
 import { ThirdStepComponent } from './steps/thirdStep/thirdStep.component';
@@ -27,6 +28,7 @@ import { AppService } from './app.service';
     FileInputComponent,
     AnalizedImageComponent,
     ImageAreaComponent,
+    LoaderComponent,
     FirstStepComponent,
     SecondStepComponent,
     ThirdStepComponent,

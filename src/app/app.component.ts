@@ -25,17 +25,21 @@ export class AppComponent {
   }
 
   launchDetetion(imageInfo) {
+    this.isDetecting = true;
     this.imageAreas = [];
     this.imageUrl = imageInfo.url;
     this.currentStep = 3;
+
 
     this.service.imageDetection(this.detectionType, imageInfo.url, imageInfo.type)
       .map(this.service.formatData)
       .subscribe({
         next: (areas) => {
+          this.isDetecting = false;
           this.imageAreas = areas;
         },
         error: (error) => {
+          this.isDetecting = false;
           console.log(error);
           alert(messages.DETECTION_ERROR);
           this.currentStep = 2;

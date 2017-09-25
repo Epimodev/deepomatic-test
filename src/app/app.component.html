@@ -20,6 +20,7 @@
 <div class="step-container" [ngClass]="{'step-container_right': currentStep < 3}">
   <app-result-step
     (onBack)="setCurrentStep(2)"
+    [isDetecting]="isDetecting"
     [imageAreas]="imageAreas"
     [imageSrc]="imageUrl"
   ></app-result-step>

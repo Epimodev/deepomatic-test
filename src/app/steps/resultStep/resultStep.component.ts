@@ -9,6 +9,7 @@ import messages from '../../../messages';
 })
 export class ResultStepComponent {
   title = messages.RESULT;
+  @Input() isDetecting: boolean;
   @Input() imageSrc: string;
   @Input() imageAreas: ImageArea[];
   @Output() onBack = new EventEmitter<void>();
