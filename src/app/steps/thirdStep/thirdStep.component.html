@@ -1,4 +1,4 @@
-<app-step [title]="messages.WHAT_IMAGE_TO_DETECT" (onNext)="validStep()" [nextIsActive]="!!uploadType">
+<app-step [title]="messages.WHAT_IMAGE_TO_DETECT" (onNext)="validStep()" [nextIsActive]="stepIsValid()">
   <div class="third-step">
     <app-check-button
       [label]="messages.IMAGE_FROM_WEB"
@@ -33,7 +33,7 @@
         [ngClass]="{'third-step__input-container_file-hidden': uploadType !== 'file'}"
       >
         <app-file-input
-          [label]="messages.CLICK_OR_DROP_FILE"
+          [label]="getInputLabel()"
           style="width: 100%"
           (onChange)="setImageFile($event)"
         ></app-file-input>

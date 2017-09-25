@@ -8,7 +8,7 @@ import messages from '../../../messages';
   styleUrls: ['./thirdStep.component.scss']
 })
 export class ThirdStepComponent {
-  @Output() onValid = new EventEmitter<void>();
+  @Output() onValid = new EventEmitter<any>();
   uploadType = '';
   imageUrl = '';
   imageFile: File;
@@ -48,6 +48,16 @@ export class ThirdStepComponent {
   }
 
   validStep() {
-    this.onValid.emit();
+    if (this.uploadType === 'url') {
+      this.onValid.emit({
+        type: 'url',
+        data: this.imageUrl,
+      });
+    } else if (this.uploadType === 'file') {
+      this.onValid.emit({
+        type: 'file',
+        data: this.imageFile,
+      });
+    }
   }
 }

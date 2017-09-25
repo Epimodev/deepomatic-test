@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   currentStep = 0;
   detectionType = '';
+  isDetecting = false;
 
   setCurrentStep(newStep) {
     this.currentStep = newStep;
@@ -15,5 +16,9 @@ export class AppComponent {
 
   setDetectionType(newDetectionType: string) {
     this.detectionType = newDetectionType;
+  }
+
+  launchDetetion(imageInfo) {
+    console.log(imageInfo);
   }
 }
