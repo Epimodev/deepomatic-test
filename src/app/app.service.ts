@@ -69,7 +69,7 @@ export class AppService {
     return this.http.get(url, {
       headers,
       responseType: ResponseContentType.Json
-    });
+    }).delay(500);
   }
 
   private launchDetectionTask(detectorType: string, data: string, urlType: string): Observable<any> {
