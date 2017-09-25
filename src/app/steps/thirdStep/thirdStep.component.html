@@ -1,0 +1,44 @@
+<app-step [title]="messages.WHAT_IMAGE_TO_DETECT" (onNext)="validStep()" [nextIsActive]="!!uploadType">
+  <div class="third-step">
+    <app-check-button
+      [label]="messages.IMAGE_FROM_WEB"
+      [selected]="uploadType === 'url'"
+      color="#464646"
+      (onClick)="setUploadType('url')"
+    ></app-check-button>
+    <span>{{messages.OR}}</span>
+    <app-check-button
+      [label]="messages.IMAGE_FROM_COMPUTER"
+      [selected]="uploadType === 'file'"
+      color="#464646"
+      (onClick)="setUploadType('file')"
+    ></app-check-button>
+
+    <hr class="third-step__separator" />
+
+    <div class="third-step__define-file">
+      <div
+        class="third-step__input-container"
+        [ngClass]="{'third-step__input-container_url-hidden': uploadType !== 'url'}"
+      >
+        <app-input
+          class="third-step__url-input-element"
+          label="URL"
+          [value]="imageUrl"
+          (onChange)="setImageUrl($event)"
+        ></app-input>
+      </div>
+      <div
+        class="third-step__input-container"
+        [ngClass]="{'third-step__input-container_file-hidden': uploadType !== 'file'}"
+      >
+        <app-input
+          class="third-step__url-input-element"
+          label="URL"
+          [value]="imageUrl"
+          (onChange)="setImageUrl($event)"
+        ></app-input>
+      </div>
+    </div>
+  </div>
+</app-step>

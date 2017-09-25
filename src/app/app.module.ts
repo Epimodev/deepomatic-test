@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { StepComponent } from './components/step/step.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CheckButtonComponent } from './components/checkButton/checkButton.component';
+import { InputComponent } from './components/input/input.component';
 import { FirstStepComponent } from './steps/firstStep/firstStep.component';
 import { SecondStepComponent } from './steps/secondStep/secondStep.component';
+import { ThirdStepComponent } from './steps/thirdStep/thirdStep.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,10 @@ import { SecondStepComponent } from './steps/secondStep/secondStep.component';
     StepComponent,
     ButtonComponent,
     CheckButtonComponent,
+    InputComponent,
     FirstStepComponent,
     SecondStepComponent,
+    ThirdStepComponent,
   ],
   imports: [
     BrowserModule

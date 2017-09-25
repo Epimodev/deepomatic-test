@@ -9,5 +9,9 @@ export default {
   WHAT_DETECT: 'Quel type d’objet veux tu détecter ?',
   FASHION: 'Mode',
   FURNITURE: 'Mobilier',
-  WEAPONS: 'Armes'
+  WEAPONS: 'Armes',
+  WHAT_IMAGE_TO_DETECT: 'Quelle image veux tu analyser ?',
+  IMAGE_FROM_WEB: 'Une image sur internet',
+  IMAGE_FROM_COMPUTER: 'Une image sur mon ordinateur',
+  OR: 'ou',
 };
