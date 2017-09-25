@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   currentStep = 0;
   detectionType = '';
+  imageUrl = '';
   isDetecting = false;
 
   setCurrentStep(newStep) {
@@ -19,6 +20,7 @@ export class AppComponent {
   }
 
   launchDetetion(imageInfo) {
-    console.log(imageInfo);
+    this.imageUrl = imageInfo.url;
+    this.currentStep = 3;
   }
 }

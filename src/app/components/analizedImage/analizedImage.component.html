@@ -1,8 +1,9 @@
 <div class="analized-image-container">
   <img #image (load)="setRectangle($event)" class="analized-image" [src]="src" alt="image" />
   <app-image-area
+    *ngFor="let area of areas"
     [rectangle]="imageRectangle"
-    [area]="areas[0]"
+    [area]="area"
   >
   </app-image-area>
 </div>

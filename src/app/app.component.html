@@ -18,5 +18,5 @@
 </div>
 
 <div class="step-container" [ngClass]="{'step-container_right': currentStep < 3}">
-  <app-result-step></app-result-step>
+  <app-result-step (onBack)="setCurrentStep(2)" [imageSrc]="imageUrl"></app-result-step>
 </div>

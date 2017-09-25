@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ImageArea } from '../../app.types';
 import messages from '../../../messages';
 
@@ -9,7 +9,8 @@ import messages from '../../../messages';
 })
 export class ResultStepComponent {
   title = messages.RESULT;
-  imageSrc = 'http://s3-eu-west-1.amazonaws.com/deepomatic.net-static/ressources/demos/Fashion/Fashion1.jpg';
+  @Input() imageSrc: string;
+  @Output() onBack = new EventEmitter<void>();
   imageAreas: ImageArea[] = [
     {
       key: '',
@@ -19,4 +20,8 @@ export class ResultStepComponent {
       ymax: 0.1500911712646484,
     }
   ];
+
+  handleBack() {
+    this.onBack.emit();
+  }
 }

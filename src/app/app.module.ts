@@ -14,6 +14,8 @@ import { SecondStepComponent } from './steps/secondStep/secondStep.component';
 import { ThirdStepComponent } from './steps/thirdStep/thirdStep.component';
 import { ResultStepComponent } from './steps/resultStep/resultStep.component';
 
+import { AppService } from './app.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { ResultStepComponent } from './steps/resultStep/resultStep.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

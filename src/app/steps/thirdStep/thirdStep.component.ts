@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AppService } from '../../app.service';
 import { DetectionType } from '../../app.types';
 import messages from '../../../messages';
 
@@ -8,12 +9,17 @@ import messages from '../../../messages';
   styleUrls: ['./thirdStep.component.scss']
 })
 export class ThirdStepComponent {
+  service: AppService;
   @Output() onValid = new EventEmitter<any>();
   @Output() onBack = new EventEmitter<void>();
   uploadType = '';
   imageUrl = '';
   imageFile: File;
   messages = messages;
+
+  constructor(service: AppService) {
+    this.service = service;
+  }
 
   setUploadType(newType: string) {
     if (newType === this.uploadType) {
@@ -52,12 +58,14 @@ export class ThirdStepComponent {
     if (this.uploadType === 'url') {
       this.onValid.emit({
         type: 'url',
-        data: this.imageUrl,
+        url: this.imageUrl,
       });
     } else if (this.uploadType === 'file') {
-      this.onValid.emit({
-        type: 'file',
-        data: this.imageFile,
+      this.service.base64Image(this.imageFile).subscribe((value: string) => {
+        this.onValid.emit({
+          type: 'file',
+          url: value,
+        });
       });
     }
   }

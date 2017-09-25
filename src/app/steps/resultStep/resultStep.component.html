@@ -1,4 +1,4 @@
-<app-step [title]="title">
+<app-step [title]="title" (onPrev)="handleBack()">
   <app-analized-image
     [src]="imageSrc"
     [areas]="imageAreas"
