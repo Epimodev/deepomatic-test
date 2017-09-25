@@ -9,6 +9,7 @@ import messages from '../../../messages';
 })
 export class ThirdStepComponent {
   @Output() onValid = new EventEmitter<any>();
+  @Output() onBack = new EventEmitter<void>();
   uploadType = '';
   imageUrl = '';
   imageFile: File;
@@ -59,5 +60,9 @@ export class ThirdStepComponent {
         data: this.imageFile,
       });
     }
+  }
+
+  handleBack() {
+    this.onBack.emit();
   }
 }

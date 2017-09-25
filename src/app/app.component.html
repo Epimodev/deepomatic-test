@@ -1,1 +1,22 @@
-<app-result-step></app-result-step>
+<div class="step-container" [ngClass]="{'step-container_left': currentStep > 0}">
+  <app-first-step (onStart)="setCurrentStep(1)"></app-first-step>
+</div>
+
+<div class="step-container" [ngClass]="{'step-container_left': currentStep > 1, 'step-container_right': currentStep < 1}">
+  <app-second-step
+    [selectedType]="detectionType"
+    (onChangeType)="setDetectionType($event)"
+    (onValid)="setCurrentStep(2)"
+  ></app-second-step>
+</div>
+
+<div class="step-container" [ngClass]="{'step-container_left': currentStep > 2, 'step-container_right': currentStep < 2}">
+  <app-third-step
+    (onBack)="setCurrentStep(1)"
+    (onValid)="launchDetetion($event)"
+  ></app-third-step>
+</div>
+
+<div class="step-container" [ngClass]="{'step-container_right': currentStep < 3}">
+  <app-result-step></app-result-step>
+</div>
