@@ -20,7 +20,7 @@ export class SecondStepComponent {
     },
     {
       label: messages.FURNITURE,
-      value: 'furnitures',
+      value: 'furniture',
       color: '#67463A',
     },
     {
