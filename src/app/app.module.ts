@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { StepComponent } from './components/step/step.component';
@@ -32,7 +33,8 @@ import { AppService } from './app.service';
     ResultStepComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

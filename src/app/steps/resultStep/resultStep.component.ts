@@ -10,16 +10,8 @@ import messages from '../../../messages';
 export class ResultStepComponent {
   title = messages.RESULT;
   @Input() imageSrc: string;
+  @Input() imageAreas: ImageArea[];
   @Output() onBack = new EventEmitter<void>();
-  imageAreas: ImageArea[] = [
-    {
-      key: '',
-      xmin: 0.7969725728034973,
-      xmax: 0.8507364988327026,
-      ymin: 0.09707668423652649,
-      ymax: 0.1500911712646484,
-    }
-  ];
 
   handleBack() {
     this.onBack.emit();

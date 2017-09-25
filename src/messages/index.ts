@@ -16,4 +16,5 @@ export default {
   OR: 'ou',
   CLICK_OR_DROP_FILE: 'Clic ou dépose un fichier ici',
   RESULT: 'Résultat',
+  DETECTION_ERROR: 'Une erreur est survenue pendant la detection, veuillez reessayé ou choisissez une autre image.',
 };
