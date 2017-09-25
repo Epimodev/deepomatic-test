@@ -15,4 +15,5 @@ export default {
   IMAGE_FROM_COMPUTER: 'Une image sur mon ordinateur',
   OR: 'ou',
   CLICK_OR_DROP_FILE: 'Clic ou dépose un fichier ici',
+  RESULT: 'Résultat',
 };

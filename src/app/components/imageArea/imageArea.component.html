@@ -1,0 +1,13 @@
+<div
+  *ngIf="!showArea"
+  class="image-area-point"
+  [ngStyle]="{top: getPointY(), left: getPointX()}"
+  (click)="openArea()"
+>
+</div>
+<div
+  *ngIf="showArea"
+  class="image-area-rectangle"
+  [ngStyle]="{top: getAreaTop(), left: getAreaLeft(), width: getAreaWidth(), height: getAreaHeight()}"
+  (click)="closeArea()"
+></div>

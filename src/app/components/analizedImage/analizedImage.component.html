@@ -1,0 +1,8 @@
+<div class="analized-image-container">
+  <img #image (load)="setRectangle($event)" class="analized-image" [src]="src" alt="image" />
+  <app-image-area
+    [rectangle]="imageRectangle"
+    [area]="areas[0]"
+  >
+  </app-image-area>
+</div>

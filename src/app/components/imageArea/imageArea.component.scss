@@ -1,0 +1,24 @@
+.image-area-point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 0.5;
+  transform: translate3d(-50%, -50%, 0);
+  transition: 200ms;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.image-area-rectangle {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 0.8;
+  cursor: crosshair;
+}
